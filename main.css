@@ -1,6 +1,57 @@
 @charset "utf-8";
 /* CSS Document */
-container {
+body{
+	background:url("images/fantastic-planet.jpg") no-repeat center fixed;
+	background-size: cover;
+}
+.container {
 	display: grid;
 	height: 100vh;
+	text-align: center;
+	grid-gap: 1rem;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 0.2fr 1.2fr 1.5fr .5fr;
+	grid-template-areas: 
+		"head head head head"
+		"nav nav nav nav"
+		"sidebar main main main"
+		"sidebar content1 content2 content3"
+		"footer footer footer footer"
+		
+}
+header {
+	background-color: aqua;
+	grid-area:head;
+
+}
+nav { 
+	background-color: aquamarine;
+	grid-area:nav;
+}
+main {
+	background-color:navajowhite;
+	grid-area:main;
+	
+}
+#sidebar {
+	background-color:aqua;
+	grid-area:sidebar;
+	
+}
+#content1 {
+	background-color:chartreuse;
+	grid-area:content1;
+	
+}
+#content2 {
+	background-color: chartreuse;
+	grid-are:content2;
+}
+#content3 {
+	background-color: chartreuse;
+	grid-area:content3;
+}
+footer {
+	background-color: aqua;
+	grid-area:footer;
 }
